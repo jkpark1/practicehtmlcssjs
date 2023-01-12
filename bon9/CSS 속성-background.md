@@ -1,0 +1,33 @@
+## 요소의 배경관련 속성
+- background-color
+	- 배경색
+	- 기본 값 : 투명(transparent)
+	- 색상 속성 그대로 적용
+- background-image
+	- 배경 이미지
+	- 기본 값 : none
+	- 이미지 경로를 지정해서 사용
+- background-repeat
+	- 배경 반복
+	- 기본 값 : repeat
+	- repeat, repeat-x, repeat-y, no-repeat
+- background-position
+	- 배경 위치
+	- left top
+	- left center
+	- left bottom
+	- right top
+	- right center
+	- right bottom
+	- center top
+	- center center
+	- center bottom
+	- px
+	- %
+- background-attachment
+	- 배경 상호 작용
+	- fixed 뷰포트 고정
+	- scroll 배경 요소 고정
+	- local 요소 내용에 고정
+
+[[html&css]] 로 돌아가기
