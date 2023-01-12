@@ -1,21 +1,20 @@
 {
   "main": {
-    "id": "b04794c3160e1878",
+    "id": "4cdc597e864c42f8",
     "type": "split",
     "children": [
       {
-        "id": "6eb0cce9c5da7530",
+        "id": "85400c6006f3224e",
         "type": "tabs",
         "children": [
           {
-            "id": "09f9ce309e488dd0",
+            "id": "48199373b9b6bf54",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "html&css.md",
+                "file": "bon9/CSS 길이 단위.md",
                 "mode": "source",
-                "backlinks": true,
                 "source": false
               }
             }
@@ -26,15 +25,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "657d487dea7b9b11",
+    "id": "3d513a2e5a8a6610",
     "type": "split",
     "children": [
       {
-        "id": "069c9797c971d9c3",
+        "id": "6704b443daf11399",
         "type": "tabs",
         "children": [
           {
-            "id": "336e1eb4043c0320",
+            "id": "b81bee5815dfb191",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -44,7 +43,7 @@
             }
           },
           {
-            "id": "6649dce706582bda",
+            "id": "24be59c27c41b18e",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -59,7 +58,7 @@
             }
           },
           {
-            "id": "351e11941f7c77f5",
+            "id": "065f94119e67bf1f",
             "type": "leaf",
             "state": {
               "type": "starred",
@@ -73,20 +72,20 @@
     "width": 300
   },
   "right": {
-    "id": "30b64fdacbbb4a07",
+    "id": "f8b3510362269613",
     "type": "split",
     "children": [
       {
-        "id": "ab02f267795100ec",
+        "id": "95dbfc23797271f1",
         "type": "tabs",
         "children": [
           {
-            "id": "e5f4ee7d3d14a9a5",
+            "id": "e476baceac73b6d7",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "html&css.md",
+                "file": "bon9/CSS 길이 단위.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,19 +97,19 @@
             }
           },
           {
-            "id": "2f8bde1cf2a69803",
+            "id": "9b430829061ecb9d",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "html&css.md",
+                "file": "bon9/CSS 길이 단위.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "989ae87a0303202c",
+            "id": "f36cd31b5c13fe1b",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -121,12 +120,12 @@
             }
           },
           {
-            "id": "4f8beddbf2491b5f",
+            "id": "264caea25b5212ca",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "html&css.md"
+                "file": "bon9/CSS 길이 단위.md"
               }
             }
           }
@@ -144,17 +143,16 @@
       "canvas:Create new canvas": false,
       "daily-notes:오늘의 데일리 노트 열기": false,
       "templates:템플릿 삽입": false,
-      "command-palette:명령어 팔레트 열기": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false
+      "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "09f9ce309e488dd0",
+  "active": "48199373b9b6bf54",
   "lastOpenFiles": [
-    "CSS 속성-boxmodel.md",
-    "html&css.md",
-    "비전공자 개발자 되기.md",
-    "CSS 길이 단위.md",
-    "CSS 속성-색상.md",
-    "CSS 속성-background.md"
+    "bon9/CSS 속성-boxmodel.md",
+    "bon9/html&css.md",
+    "bon9/CSS 속성-background.md",
+    "bon9/CSS 속성-색상.md",
+    "bon9/Pasted image 20230111173720.png",
+    "bon9/비전공자 개발자 되기.md"
   ]
 }

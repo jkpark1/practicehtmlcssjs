@@ -9,7 +9,7 @@
 	- 기본값 : none
 	- content의 외곽선
 	- px단위
-	```
+	```html
 	border 속성
 	border-width:[t][r][b][l];
 	border-style:[t][r][b][l];
@@ -22,7 +22,7 @@
 	- 음수 X
 	- auto X
 	- px, %:width값에 영향을 받음
-	```
+	```html
 	padding 속성
 	padding-top:length ot percent
 	padding-right:length ot percent

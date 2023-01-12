@@ -10,7 +10,7 @@ html의 문서를 꾸미고 표현하는데 특화된 언어로   크게 두 가
 2. 어떻게 
 
 ##### 규칙(rule set)
-```
+```html
 p {color: red;}---> a rule set
 ```
 아래 구성들의 총 집합을 규칙(rule set)이라고 한다.
@@ -39,7 +39,7 @@ h1과 같은 html 태그를 지정한다.
 ```
 2. internal
 head에 셀렉터를 포함한 룰셋 전부를 추가한다
-```
+```html
 <html lang="ko">
 	<head>
 		<meta charset="utf-8">
@@ -57,7 +57,7 @@ head에 셀렉터를 포함한 룰셋 전부를 추가한다
 3. External
 별도의 외부 css파일을 만들어 연결해서 사용한다
 link 태그 사용 
-```
+```html
 <link rel="stylesheet" href="./style.css">
 ```
 4. @import
@@ -72,7 +72,7 @@ link 태그 사용
 #### 1. 요소 선택자(TAG)
 ##### 문서내의 선택자에 해당되는 모든 헤딩요소에 스타일이 적용된다
 
-```
+```css
 h1 { color: yellow; }
 h2 { color: yellow; }
 h3 { color: yellow; }
@@ -109,7 +109,7 @@ h6 { color: yellow; }
 CSS에 적용한 클래스로 지정한 스타일을 html에 중첩해서 사용할 수 있다.
 
 - css
-```
+```css
 .foo {font-size: 30px;}
 .bar {color: blue;}
 ```
@@ -131,7 +131,7 @@ class 선택자와 유사
 4. 구체성 
 
 ##### 코드실습
-```
+```html
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -172,7 +172,7 @@ class 선택자와 유사
 `p[class][id] { text-decoration: underline; }`
 
 - html
-```
+```html
 1. <p class="foo">Hello</p>
 2. <p class="bar">CSS</p>
 3. <p class="baz" id="title">HTML</p>
@@ -199,7 +199,7 @@ class 선택자와 유사
 `[class*=""]` : 클래스 속성에 특정 문자가 있기만 하면 선택
 
 - css
-```
+```css
 p[class~="color"] { font-style: italic; }
 p[class^="color"] { font-style: italic; }
 p[class$="color"] { font-style: italic; }
@@ -207,13 +207,13 @@ p[class*="color"] { font-style: italic; }
 ```
 
 - html
-```
+```html
 1. <p class="color hot">red</p>
 2. <p class="cool color">blue</p>
 3. <p class="colorful nature">rainbow</p>
 ```
 - 적용
-```
+```css
 p[class~="color"] { font-style: italic; } 1, 2번째 요소에 적용
 p[class^="color"] { font-style: italic; } 1, 3번째 요소에 적용
 p[class$="color"] { font-style: italic; } 2번째 요소에 적용
@@ -317,3 +317,4 @@ div span {.....} ---> div 요소의 자손 span을 선택
 #### 4. [[CSS 길이 단위]]
 #### 5. [[CSS 속성-색상]]
 #### 6. [[CSS 속성-background]]
+#### 7. [[CSS 속성-boxmodel]]
