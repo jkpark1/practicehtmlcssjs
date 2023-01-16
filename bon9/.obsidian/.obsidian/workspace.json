@@ -1,23 +1,18 @@
 {
   "main": {
-    "id": "b04794c3160e1878",
+    "id": "46c0e8714c888425",
     "type": "split",
     "children": [
       {
-        "id": "6eb0cce9c5da7530",
+        "id": "2de321b6747e418a",
         "type": "tabs",
         "children": [
           {
-            "id": "09f9ce309e488dd0",
+            "id": "af2aa8f458157d65",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "비전공자 개발자 되기.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -26,15 +21,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "657d487dea7b9b11",
+    "id": "2bbfb4ecbcffbfd3",
     "type": "split",
     "children": [
       {
-        "id": "069c9797c971d9c3",
+        "id": "0973b5cd733683f8",
         "type": "tabs",
         "children": [
           {
-            "id": "336e1eb4043c0320",
+            "id": "3c3d8eb49592b96f",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -44,7 +39,7 @@
             }
           },
           {
-            "id": "6649dce706582bda",
+            "id": "c61076b7f30a30bd",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -59,7 +54,7 @@
             }
           },
           {
-            "id": "351e11941f7c77f5",
+            "id": "ca2696cdc887d928",
             "type": "leaf",
             "state": {
               "type": "starred",
@@ -73,20 +68,19 @@
     "width": 300
   },
   "right": {
-    "id": "30b64fdacbbb4a07",
+    "id": "8eeb5e3e5b351a0d",
     "type": "split",
     "children": [
       {
-        "id": "ab02f267795100ec",
+        "id": "97ba122e83d86ad5",
         "type": "tabs",
         "children": [
           {
-            "id": "e5f4ee7d3d14a9a5",
+            "id": "6490173c01367cab",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "비전공자 개발자 되기.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,19 +92,18 @@
             }
           },
           {
-            "id": "2f8bde1cf2a69803",
+            "id": "e1f9f74c5c42db5e",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "비전공자 개발자 되기.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "989ae87a0303202c",
+            "id": "8a16097b9867b181",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -121,13 +114,11 @@
             }
           },
           {
-            "id": "4f8beddbf2491b5f",
+            "id": "1a427faf8a3f3d3a",
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "비전공자 개발자 되기.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -144,18 +135,9 @@
       "canvas:Create new canvas": false,
       "daily-notes:오늘의 데일리 노트 열기": false,
       "templates:템플릿 삽입": false,
-      "command-palette:명령어 팔레트 열기": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false
+      "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "09f9ce309e488dd0",
-  "lastOpenFiles": [
-    "CSS 길이 단위.md",
-    "CSS 속성-색상.md",
-    "CSS 속성-boxmodel.md",
-    "비전공자 개발자 되기.md",
-    "html&css.md",
-    "Pasted image 20230111173720.png",
-    "CSS 속성-background.md"
-  ]
+  "active": "af2aa8f458157d65",
+  "lastOpenFiles": []
 }
