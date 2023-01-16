@@ -50,67 +50,61 @@
         </style>
     </head>
     <body>
-        <div>
-            <h1>position(offset 미지정)</h1>
-            <h2>static(기본)</h2>
-            <div class="parent">
-                <div class="sibling">sibling1</div>
-                <div class="child static">static</div>
-                <div class="sibling">sibling2</div>
-            </div>
-    
-            <h2>relative</h2>
-            <div class="parent">
-                <div class="sibling">sibling1</div>
-                <div class="child relative">relative</div>
-                <div class="sibling">sibling2</div>
-            </div>
-    
-            <h2>absolute</h2>
-            <div class="parent">
-                <div class="sibling">sibling1</div>
-                <span class="child absolute">absolute</span>
-                <div class="sibling">sibling2</div>
-            </div>
-
-            <h2>fixed</h2>
-            <div class="parent">
-                <div class="sibling">sibling1</div>
-                <div class="child fixed">fixed</div>
-                <div class="sibling">sibling2</div>           
-            </div>    
+        <h1>position(offset 미지정)</h1>
+        <h2>static(기본)</h2>
+        <div class="parent">
+            <div class="sibling">sibling1</div>
+            <div class="child static">static</div>
+            <div class="sibling">sibling2</div>
         </div>
 
-        <div style="display: none;">
-            <h1>position (offset 지정)</h1>
-            <h2>static</h2>
-            <div class="parent">
-                <div class="sibling">sibling1</div>
-                <div class="child_offset static" style="top: 40px; left: 40px;">static<br>top: 40, left: 40</div>
-                <div class="sibling">sibling2</div>           
-            </div>
-    
-            <h2>relative</h2>
-            <div class="parent">
-                <div class="sibling">sibling1</div>
-                <div class="child_offset relative" style="top: 40px; left: 40px;">relative<br>top: 40, left: 40</div>
-                <div class="sibling">sibling2</div>           
-            </div>
-    
-            <h2>absolute-parent relative</h2>
-            <div class="parent relative">
-                <div class="sibling">sibling1</div>
-                <div class="child_offset absolute" style="top: 40px; left: 80px;">absolute<br>top: 40, left: 80</div>
-                <div class="sibling">sibling2</div>           
-            </div>
-    
-            <h2>fixed</h2>
-            <div class="parent">
-                <div class="sibling">sibling1</div>
-                <div class="child_offset fixed" style="top: 100px; left: 80%;">fixed<br>top: 40, left: 80%</div>
-                <div class="sibling">sibling2</div>           
-            </div>    
+        <h2>relative</h2>
+        <div class="parent">
+            <div class="sibling">sibling1</div>
+            <div class="child relative">relative</div>
+            <div class="sibling">sibling2</div>
         </div>
+
+        <h2>absolute</h2>
+        <div class="parent">
+            <div class="sibling">sibling1</div>
+            <span class="child absolute">absolute</span>
+            <div class="sibling">sibling2</div>
+        </div>
+        <h2>fixed</h2>
+        <div class="parent">
+            <div class="sibling">sibling1</div>
+            <div class="child fixed">fixed</div>
+            <div class="sibling">sibling2</div>           
+        </div>    
+        <h1>position (offset 지정)</h1>
+        <h2>static</h2>
+        <div class="parent">
+            <div class="sibling">sibling1</div>
+            <div class="child_offset static" style="top: 40px; left: 40px;">static<br>top: 40, left: 40</div>
+            <div class="sibling">sibling2</div>           
+        </div>
+
+        <h2>relative</h2>
+        <div class="parent">
+            <div class="sibling">sibling1</div>
+            <div class="child_offset relative" style="top: 40px; left: 40px;">relative<br>top: 40, left: 40</div>
+            <div class="sibling">sibling2</div>           
+        </div>
+
+        <h2>absolute-parent relative</h2>
+        <div class="parent relative">
+            <div class="sibling">sibling1</div>
+            <div class="child_offset absolute" style="top: 40px; left: 80px;">absolute<br>top: 40, left: 80</div>
+            <div class="sibling">sibling2</div>           
+        </div>
+
+        <h2>fixed</h2>
+        <div class="parent">
+            <div class="sibling">sibling1</div>
+            <div class="child_offset fixed" style="top: 100px; left: 80%;">fixed<br>top: 40, left: 80%</div>
+            <div class="sibling">sibling2</div>           
+        </div>    
 
     </body>
 </html>
