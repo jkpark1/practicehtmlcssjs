@@ -7,8 +7,8 @@ body {
     top: 0px;
     overflow: hidden;
     background-color: #009ADA;
-    z-index: 3;
-    width: 100%
+    width: 100%;
+    z-index: 1;
 }
 
 .top-nav-logo{
@@ -16,6 +16,7 @@ body {
     height: 40px;
     margin: 0px;
     float: left;
+    clear: left;
 }
 
 .topnav a{
@@ -27,6 +28,7 @@ body {
     font-weight: bold;
     padding: 10px;
     width: 180px;
+    clear: left;
 }
 
 .sidenav{
@@ -35,8 +37,6 @@ body {
     width: 180px;
     height: 100%;
     padding: 40px 10px 10px;
-    position: static;
-    z-index: 1;
     position: fixed;
     margin-top: 60px
 }
@@ -49,7 +49,8 @@ body {
     font-weight: 600;
     text-decoration: none;
     width: 100px;
-    padding: 10px 40px;                        
+    padding: 10px 40px;                  
+    clear: left;      
 }
 
 .sidenav a:hover{
@@ -58,11 +59,11 @@ body {
 
 .main-page{
     border: 2px solid black;
-    width: 70%;
-    position: relative;
+    width: 80%;
+    height: 100%;
+    position: absolute;
     top: 150px;
-    left: 20px;
-    z-index: 2;
+    left: 250px;
     margin: auto;
 }
 
@@ -82,6 +83,14 @@ body {
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+
+.main-article-box-caption{
+    display: block;
+    position: relative;
+    color: #009ADA;
+    border: 1px solid black;
+    float: left;
 }
 
 
