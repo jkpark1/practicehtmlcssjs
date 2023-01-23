@@ -4,7 +4,7 @@
 body{
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: white;
+    background-color: whitesmoke;
 }
 
 .main-header{
@@ -14,7 +14,7 @@ body{
     border: 1px dashed black; /*임시 가이드라인*/ 
     position: fixed;
     z-index: 2;
-    background-color: #0095D3;
+    background-color: #63ADF2;
     top: 0px; left: 0px;
 }
 
@@ -39,11 +39,12 @@ body{
 
 
 .nav{
+    background-color: gray;
     float: left;
     width: 200px;
     height: 100%;
     border: 1px dashed black; /*임시 가이드라인*/
-    padding: 20px;
+    padding: 0px;
     position: fixed;
     top: 60px; left: 0;
     z-index: 1;
@@ -51,26 +52,41 @@ body{
 .nav a{
     float: left;
     display: block;
-    width: 150px;
-    margin: 20px 5px;
+    width: 200px;
+    padding: 20px;
     text-align: left;
     text-decoration: none;
-    font-size: 30px; font-weight: 600;
+    font-size: 30px; font-weight: 500;
     z-index: 1;
-    color: #333;
+    color: #eee;
 }
 .nav a:hover{
-    color: #0095D3;
-    font-size: 32px;
+    font-size: 34px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width: 205px;
+    background-color: rgba(0, 68, 255, 0.5);
 }
+
 .main-container{
     float: left;
     width: 1400px;
     height: 1400px;
     border: 1px dashed black; /*임시 가이드라인*/
     position: relative;
-    top: 76px;
-    left: 208px;
+    top: 60px;
+    left: 200px;
+    margin: 5px;
+}
+.News-container{
+    float: left;
+    width: 1400px;
+    height: 1400px;
+    border: 1px dashed black; /*임시 가이드라인*/
+    position: relative;
+    top: 60px;
+    left: 200px;
+    margin: 5px;
 }
 
 .main-container div{
@@ -138,6 +154,7 @@ body{
     text-align: center;
     border: 1px dashed; /*임시 가이드라인*/
     position: relative;
-    top: 84px;
-    left: 208px;
+    top: 60px;
+    left: 200px;
+    margin: 5px;
 }
