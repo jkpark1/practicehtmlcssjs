@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Array& Loop EX</title>
+</head>
+<body>
+    <h1>Array & Loop</h1>
+    <!-- 배열 생성 -->
+        <script>
+            var friend = ['jongkuk', 'jeahyuk', 'teawon'];
+        </script>
+    <h2>Friends list</h2>
+    <!-- while 반복문을 통해 배열을 리스트로 출력
+    변수 i를 0으로 지정, 루프 한번을 돌면 i = i + 1이됨 
+    루프를 도는 조건 : 변수 i가 배열의 수보다 같거나 크면 반복종료-->
+    <ul>
+        <script>
+            var i = 0;
+            while( i < friend.length ){
+                document.write('<li>'+friend[i]+'</li>');
+                i = i + 1;
+            }
+        </script>
+    </ul>
+</body>
+</html>
