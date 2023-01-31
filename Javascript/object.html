@@ -1,0 +1,68 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS object</title>
+    <style>
+      a {
+        color: red;
+      }
+    </style>
+    <script>
+      function setColor(color) {
+        var alist = document.querySelectorAll("a");
+        var i = 0;
+        while (i < alist.length) {
+          alist[i].style.color = color;
+          i = i + 1;
+        }
+      }
+      function BodySetColor(color) {
+        document.querySelector("body").style.color = color;
+      }
+
+      function BodySetBackgroundColor(backgroundColor) {
+        document.querySelector("body").style.backgroundColor = backgroundColor;
+      }
+
+      function nightdayHandler(self) {
+        var target = document.querySelector("body");
+        if (document.querySelector("#night_day").value === "night") {
+          BodySetColor("white");
+          BodySetBackgroundColor("black");
+          setColor("powderblue");
+          self.value = "day";
+        } else {
+          BodySetColor("black");
+          BodySetBackgroundColor("white");
+          setColor("red");
+          self.value = "night";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1><a href="./iftoggle.html">Hellow, JS</a></h1>
+    <script></script>
+    <input
+      id="night_day"
+      type="button"
+      value="night"
+      onclick="nightdayHandler(this)
+    " />
+    <ol>
+      <li><a href="./iftoggle.html">HTML</a></li>
+      <li><a href="./iftoggle.html">CSS</a></li>
+      <li><a href="./iftoggle.html">JavaScript</a></li>
+    </ol>
+    <h2>JavaScript</h2>
+    JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled
+    programming language with first-class functions. While it is most well-known
+    as the scripting language for Web pages, many non-browser environments also
+    use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a
+    prototype-based, multi-paradigm, single-threaded, dynamic language,
+    supporting object-oriented, imperative, and declarative (e.g. functional
+    programming) styles.
+  </body>
+</html>

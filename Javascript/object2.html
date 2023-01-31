@@ -1,0 +1,26 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS object2</title>
+  </head>
+  <body>
+    <h1>Object</h1>
+    <h2>Create</h2>
+    <script>
+      var coworkers = {
+        programmer: "JK",
+        designer: "JH",
+      };
+      document.write("programmer : " + coworkers.programmer + "<br>");
+      document.write("designer : " + coworkers.designer + "<br>");
+      coworkers.bookkeeper = "TW";
+      document.write("bookkeeper : " + coworkers.bookkeeper + "<br>");
+      coworkers["data scientist"] = "HJH";
+      document.write(
+        "data scientist : " + coworkers["data scientist"] + "<br>"
+      );
+    </script>
+  </body>
+</html>
