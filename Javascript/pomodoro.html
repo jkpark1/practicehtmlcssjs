@@ -1,0 +1,159 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pomodoro</title>
+    <link href="https://css.gg/play-button.css" rel="stylesheet" />
+    <link href="https://css.gg/redo.css" rel="stylesheet" />
+    <link href="https://css.gg/play-pause.css" rel="stylesheet" />
+    <style>
+      body {
+        color: whitesmoke;
+        background-color: #444;
+        font-family: Arial, Helvetica, sans-serif;
+        box-sizing: border-box;
+      }
+
+      #Main-navbar {
+        background-color: #222;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        z-index: 1;
+      }
+
+      .Main-title {
+        float: left;
+        background-color: #222;
+        width: 150px;
+        height: 60px;
+        text-decoration: none;
+        text-align: center;
+      }
+      .Main-title-text {
+        text-align: center;
+        color: whitesmoke;
+        font-size: 20px;
+        font-weight: 800;
+        display: block;
+        padding: 16px;
+      }
+      #clockspace {
+        position: relative;
+        top: 60px;
+        width: 100%;
+        height: 600px;
+      }
+      #clockbox {
+        position: relative;
+        top: 150px;
+        margin: 0 auto;
+        width: 300px;
+        height: 150px;
+        text-align: center;
+      }
+      [id="25minClock"] {
+        position: relative;
+        font-size: 100px;
+        display: block;
+        padding: 17.5px;
+      }
+      #btnBox {
+        position: relative;
+        top: 150px;
+        width: 300px;
+        height: 60px;
+        margin: 0 auto;
+        background-color: #555;
+      }
+      #btnBox button {
+        color: #ccc;
+        position: relative;
+        background-color: #7b7b7b;
+        width: 80px;
+        height: 50px;
+        border-top: 0;
+        border-left: 0;
+        border-right: white solid 1px;
+        border-bottom: white solid 1px;
+        font-size: 20px;
+        font-weight: 600;
+        text-align: center;
+      }
+      .gg-play-button {
+        box-sizing: border-box;
+        position: relative;
+        display: block;
+        transform: scale(var(--ggs, 1));
+        width: 22px;
+        height: 22px;
+      }
+      .gg-play-button::before {
+        content: "";
+        display: block;
+        box-sizing: border-box;
+        position: absolute;
+        width: 0;
+        height: 10px;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-left: 6px solid;
+        top: 6px;
+        left: 9px;
+      }
+      .gg-play-pause {
+        box-sizing: border-box;
+        position: relative;
+        display: block;
+        transform: scale(var(--ggs, 1));
+        width: 8px;
+        height: 10px;
+        border-left: 3px solid;
+        border-right: 3px solid;
+      }
+
+      .gg-redo {
+        box-sizing: border-box;
+        position: relative;
+        display: block;
+        transform: scale(var(--ggs, 1));
+        width: 14px;
+        height: 14px;
+        border: 2px solid;
+        border-right-color: transparent;
+        border-radius: 100px;
+      }
+      .gg-redo::before {
+        content: "";
+        display: block;
+        box-sizing: border-box;
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        border-top: 2px solid;
+        border-right: 2px solid;
+        top: -3px;
+        right: -1px;
+        transform: rotate(68deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="Main-navbar">
+      <a class="Main-title" href="./pomodoro.html"
+        ><span class="Main-title-text">pomodoro</span></a
+      >
+    </div>
+    <div id="clockspace">
+      <div id="clockbox"><span id="25minClock">25:00</span></div>
+      <div id="btnBox">
+        <button id="button1"><i class="gg-play-button"></i></button>
+        <button id="button2"><i class="gg-play-pause"></i></button>
+        <button id="button3"><i class="gg-redo"></i></button>
+      </div>
+    </div>
+  </body>
+</html>

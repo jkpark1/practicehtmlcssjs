@@ -7,34 +7,44 @@
     <style>
       a {
         color: red;
+        text-decoration: none;
       }
     </style>
     <script>
-      function setColor(color) {
-        var alist = document.querySelectorAll("a");
-        var i = 0;
-        while (i < alist.length) {
-          alist[i].style.color = color;
-          i = i + 1;
-        }
-      }
-      function bodySetcolor(color) {
-        document.querySelector("body").style.color = color;
-      }
-      function bodySetbackgroundColor(backgroundColor) {
-        document.querySelector("body").style.backgroundColor = backgroundColor;
-      }
+      //links 관련 객체//
+      var Links = {
+        setColor: function (color) {
+          var alist = document.querySelectorAll("a");
+          var i = 0;
+          while (i < alist.length) {
+            alist[i].style.color = color;
+            i = i + 1;
+          }
+        },
+      };
+      //Body속성 관련 개체
+      var Body = {
+        Setcolor: function (color) {
+          document.querySelector("body").style.color = color;
+        },
+        SetbackgroundColor: function (backgroundColor) {
+          document.querySelector("body").style.backgroundColor =
+            backgroundColor;
+        },
+      };
+      ///주 야간 모드 버튼
+      ///주간 : 흰 배경 검은 글씨 빨간 링크, 야간 : 검은 배경 흰 글씨 파우더블루 링크
       function nightdayHandler(self) {
         var target = document.querySelector("body");
         if (document.querySelector("#night_day").value === "night") {
-          setColor("powderblue");
-          bodySetcolor("white");
-          bodySetbackgroundColor("black");
+          Links.setColor("powderblue");
+          Body.Setcolor("white");
+          Body.SetbackgroundColor("black");
           self.value = "day";
         } else {
-          setColor("lightblue");
-          bodySetcolor("black");
-          bodySetbackgroundColor("white");
+          Links.setColor("red");
+          Body.Setcolor("black");
+          Body.SetbackgroundColor("white");
           self.value = "night";
         }
       }
