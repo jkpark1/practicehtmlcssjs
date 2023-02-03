@@ -4,9 +4,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pomodoro</title>
-    <link href="https://css.gg/play-button.css" rel="stylesheet" />
-    <link href="https://css.gg/redo.css" rel="stylesheet" />
-    <link href="https://css.gg/play-pause.css" rel="stylesheet" />
     <style>
       body {
         color: whitesmoke;
@@ -62,97 +59,99 @@
         padding: 17.5px;
       }
       #btnBox {
+        text-align: center;
         position: relative;
-        top: 150px;
+        top: 155px;
         width: 300px;
         height: 60px;
         margin: 0 auto;
-        background-color: #555;
+        background-color: #444;
       }
+
       #btnBox button {
-        color: #ccc;
-        position: relative;
+        color: #eeeeee;
         background-color: #7b7b7b;
         width: 80px;
         height: 50px;
-        border-top: 0;
-        border-left: 0;
-        border-right: white solid 1px;
-        border-bottom: white solid 1px;
-        font-size: 20px;
-        font-weight: 600;
+        margin: 5px auto;
+        border: 0;
+        border-radius: 5px;
+        font-size: 18px;
+        font-weight: 500;
         text-align: center;
       }
-      .gg-play-button {
-        box-sizing: border-box;
-        position: relative;
-        display: block;
-        transform: scale(var(--ggs, 1));
-        width: 22px;
-        height: 22px;
-      }
-      .gg-play-button::before {
-        content: "";
-        display: block;
-        box-sizing: border-box;
-        position: absolute;
-        width: 0;
-        height: 10px;
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        border-left: 6px solid;
-        top: 6px;
-        left: 9px;
-      }
-      .gg-play-pause {
-        box-sizing: border-box;
-        position: relative;
-        display: block;
-        transform: scale(var(--ggs, 1));
-        width: 8px;
-        height: 10px;
-        border-left: 3px solid;
-        border-right: 3px solid;
-      }
-
-      .gg-redo {
-        box-sizing: border-box;
-        position: relative;
-        display: block;
-        transform: scale(var(--ggs, 1));
-        width: 14px;
-        height: 14px;
-        border: 2px solid;
-        border-right-color: transparent;
-        border-radius: 100px;
-      }
-      .gg-redo::before {
-        content: "";
-        display: block;
-        box-sizing: border-box;
-        position: absolute;
-        width: 6px;
-        height: 6px;
-        border-top: 2px solid;
-        border-right: 2px solid;
-        top: -3px;
-        right: -1px;
-        transform: rotate(68deg);
+      #btnBox button:hover {
+        background-color: #333;
+        cursor: pointer;
       }
     </style>
   </head>
   <body>
+    <script>
+      function timerrule(time) {
+        var time = time;
+        var min = "";
+        var sec = "";
+        var timer = setInterval(function () {
+          min = parseInt(time / 60);
+          sec = time % 60;
+          if ((sec < 10) & (min < 10)) {
+            document.getElementById("25minClock").innerHTML =
+              "0" + min + ":" + "0" + sec;
+          } else if ((sec === 10) & (min < 10)) {
+            document.getElementById("25minClock").innerHTML =
+              "0" + min + ":" + sec;
+          } else if ((min < 10) & (sec > 10)) {
+            document.getElementById("25minClock").innerHTML =
+              "0" + min + ":" + sec;
+          } else if ((min === 10) & (sec < 10)) {
+            document.getElementById("25minClock").innerHTML =
+              min + ":" + "0" + sec;
+          } else if ((sec < 10) & (min > 10)) {
+            document.getElementById("25minClock").innerHTML =
+              min + ":" + "0" + sec;
+          } else {
+            document.getElementById("25minClock").innerHTML = +min + ":" + sec;
+          }
+          time--;
+          if (time < 0) {
+            clearInterval(timer);
+            document.getElementById("25minClock").innerHTML = "00:00";
+            alert("Finished");
+          }
+        }, 1000);
+      }
+    </script>
     <div id="Main-navbar">
       <a class="Main-title" href="./pomodoro.html"
         ><span class="Main-title-text">pomodoro</span></a
       >
     </div>
     <div id="clockspace">
-      <div id="clockbox"><span id="25minClock">25:00</span></div>
+      <div id="clockbox"><span id="25minClock">00:00</span></div>
+      <script>
+        var spantext = document.getElementById("25minClock").innerHTML;
+        if (spantext === "00:00") {
+          document.getElementById("25minClock").innerHTML = "25:00";
+        }
+      </script>
       <div id="btnBox">
-        <button id="button1"><i class="gg-play-button"></i></button>
-        <button id="button2"><i class="gg-play-pause"></i></button>
-        <button id="button3"><i class="gg-redo"></i></button>
+        <button
+          id="button1"
+          onclick="
+          timerrule(1499);
+          ">
+          Start
+        </button>
+        <button
+          id="button2"
+          onclick="
+          console.log();
+          document.getElementById('25minClock').innerHTML = spantext;
+        ">
+          Pause
+        </button>
+        <button id="button3">Reset</button>
       </div>
     </div>
   </body>
