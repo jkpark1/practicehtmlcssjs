@@ -4,155 +4,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pomodoro</title>
-    <style>
-      body {
-        color: whitesmoke;
-        background-color: #444;
-        font-family: Arial, Helvetica, sans-serif;
-        box-sizing: border-box;
-      }
-
-      #Main-navbar {
-        background-color: #222;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 60px;
-        z-index: 1;
-      }
-
-      .Main-title {
-        float: left;
-        background-color: #222;
-        width: 150px;
-        height: 60px;
-        text-decoration: none;
-        text-align: center;
-      }
-      .Main-title-text {
-        text-align: center;
-        color: whitesmoke;
-        font-size: 20px;
-        font-weight: 800;
-        display: block;
-        padding: 16px;
-      }
-      #clockspace {
-        position: relative;
-        top: 60px;
-        width: 100%;
-        height: 600px;
-      }
-      #clockbox {
-        position: relative;
-        top: 150px;
-        margin: 0 auto;
-        width: 300px;
-        height: 150px;
-        text-align: center;
-      }
-      [id="25minClock"] {
-        position: relative;
-        font-size: 100px;
-        display: block;
-        padding: 17.5px;
-      }
-      #btnBox {
-        text-align: center;
-        position: relative;
-        top: 155px;
-        width: 300px;
-        height: 60px;
-        margin: 0 auto;
-        background-color: #444;
-      }
-
-      #btnBox button {
-        color: #eeeeee;
-        background-color: #7b7b7b;
-        width: 80px;
-        height: 50px;
-        margin: 5px auto;
-        border: 0;
-        border-radius: 5px;
-        font-size: 18px;
-        font-weight: 500;
-        text-align: center;
-      }
-      #btnBox button:hover {
-        background-color: #333;
-        cursor: pointer;
-      }
-    </style>
+    <link rel="stylesheet" href="./temp.css" />
   </head>
   <body>
-    <script>
-      function timerrule(time) {
-        var time = time;
-        var min = "";
-        var sec = "";
-        var timer = setInterval(function () {
-          min = parseInt(time / 60);
-          sec = time % 60;
-          if ((sec < 10) & (min < 10)) {
-            document.getElementById("25minClock").innerHTML =
-              "0" + min + ":" + "0" + sec;
-          } else if ((sec === 10) & (min < 10)) {
-            document.getElementById("25minClock").innerHTML =
-              "0" + min + ":" + sec;
-          } else if ((min < 10) & (sec > 10)) {
-            document.getElementById("25minClock").innerHTML =
-              "0" + min + ":" + sec;
-          } else if ((min === 10) & (sec < 10)) {
-            document.getElementById("25minClock").innerHTML =
-              min + ":" + "0" + sec;
-          } else if ((sec < 10) & (min > 10)) {
-            document.getElementById("25minClock").innerHTML =
-              min + ":" + "0" + sec;
-          } else {
-            document.getElementById("25minClock").innerHTML = +min + ":" + sec;
-          }
-          time--;
-          if (time < 0) {
-            clearInterval(timer);
-            document.getElementById("25minClock").innerHTML = "00:00";
-            alert("Finished");
-          }
-        }, 1000);
-      }
-    </script>
     <div id="Main-navbar">
       <a class="Main-title" href="./pomodoro.html"
         ><span class="Main-title-text">pomodoro</span></a
       >
     </div>
-    <div id="clockspace">
-      <div id="clockbox"><span id="25minClock">00:00</span></div>
-      <script>
-        var spantext = document.getElementById("25minClock").innerHTML;
-        if (spantext === "00:00") {
-          document.getElementById("25minClock").innerHTML = "25:00";
-        }
-      </script>
-      <div id="btnBox">
-        <button
-          id="button1"
-          onclick="
-          timerrule(1499);
-          ">
-          Start
-        </button>
-        <button
-          id="button2"
-          onclick="
-          console.log();
-          document.getElementById('25minClock').innerHTML = spantext;
-        ">
-          Pause
-        </button>
-        <button id="button3">Reset</button>
+    <div id="TimerAnime">
+      <div class="AnimeBox">
+        <div class="WaterAnime"></div>
+        <div class="WaterAnime2"></div>
+        <div class="WaterAnime3"></div>
+        <div class="WaterAnime4"></div>
       </div>
     </div>
+    <div id="clockspace">
+      <div id="clockbox"><span id="pomodoroclock"></span></div>
+      <div id="btnBox">
+        <button class="button">Start</button>
+        <button class="button">Pause</button>
+        <button class="button">Reset</button>
+        <button class="button">25m</button>
+        <button class="button">5m</button>
+        <button class="button">10m</button>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.js"
+      integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+      crossorigin="anonymous"></script>
+    <script src="pomodoro.js"></script>
   </body>
 </html>
