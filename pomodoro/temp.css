@@ -1,0 +1,240 @@
+body {
+  color: whitesmoke;
+  background-color: #444;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+#Main-navbar {
+  background-color: #222;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 3;
+}
+
+.Main-title {
+  float: left;
+  background-color: #222;
+  width: 160px;
+  height: 60px;
+  text-decoration: none;
+  text-align: center;
+}
+.Main-title-text {
+  text-align: center;
+  color: whitesmoke;
+  font-size: 20px;
+  font-weight: 800;
+  display: block;
+  padding: 16px;
+}
+#clockspace {
+  position: relative;
+  top: 60px;
+  width: 100%;
+  height: 600px;
+}
+#clockbox {
+  position: relative;
+  top: 61.5px;
+  margin: 0 auto;
+  width: 250px;
+  height: 150px;
+  text-align: center;
+}
+#pomodoroclock {
+  position: relative;
+  font-size: 80px;
+  display: block;
+  padding: 17.5px;
+  text-align: center;
+  z-index: 2;
+}
+#btnBox {
+  text-align: center;
+  position: relative;
+  top: 80px;
+  width: 300px;
+  height: 60px;
+  margin: 0 auto;
+  background-color: #444;
+}
+
+.button {
+  color: #eeeeee;
+  background-color: #7b7b7b;
+  width: 80px;
+  height: 50px;
+  margin: 5px auto;
+  border: 0;
+  border-radius: 5px;
+  font-size: 18px;
+  text-align: center;
+}
+.button.Func {
+  font-family: Dongle;
+  font-size: 20px;
+}
+#btnBox button:hover {
+  background-color: #3fabc3;
+  cursor: pointer;
+}
+#TimerAnime {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  top: 61px;
+  margin: 0px auto;
+}
+
+/* #S-TimeBtnBox {
+  text-align: center;
+  position: relative;
+  top: 170px;
+  width: 300px;
+  height: 60px;
+  margin: 0 auto;
+}
+#S-TimeBtnBox .ST-button {
+  color: #eeeeee;
+  background-color: #7b7b7b;
+  width: 40px;
+  height: 40px;
+  margin: 5px auto;
+  border: 0;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+}
+#S-TimeBtnBox .ST-button:hover {
+  background-color: #333;
+  cursor: pointer;
+} */
+.AnimeBox {
+  position: relative;
+  margin: 0px auto;
+  top: 25px;
+  width: 250px;
+  height: 250px;
+  border-right: 10px solid white;
+  border-left: 10px solid white;
+  border-bottom: 10px solid white;
+  border-top: 0px;
+  border-radius: 5px;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+
+#WaterAnime {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  left: 125px;
+  top: 105px;
+  background-color: #3fabc3;
+  border-radius: 10%;
+  animation: swing 7s ease-in-out infinite;
+  z-index: 0;
+}
+
+/* .WaterAnime {
+  content: "";
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  background-color: #3fabc3;
+  left: 50%;
+  transform: translateX(-25%);
+  border-radius: 35%;
+  animation: filled 30s linear infinite;
+}
+.WaterAnime2 {
+  content: "";
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  background-color: #3fabc3;
+  border-radius: 35%;
+  animation: WaterAnime2 linear 30s infinite;
+}
+
+.WaterAnime3 {
+  content: "";
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  background-color: #3fabc3;
+  border-radius: 35%;
+  animation: WaterAnime3 linear 30s infinite;
+}
+
+.WaterAnime4 {
+  content: "";
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  background-color: #3fabc3;
+  border-radius: 35%;
+  animation: WaterAnime4 30s linear infinite;
+} */
+
+@keyframes swing {
+  0% {
+    transform: translateX(-50%) rotate(1.2deg);
+  }
+  50% {
+    transform: translateX(-50%) rotate(-1.2deg);
+  }
+  100% {
+    transform: translateX(-50%) rotate(1.2deg);
+  }
+}
+
+/* @keyframes filled {
+  from {
+    top: 500px;
+    transform: translateX(-25%) rotate(0deg);
+  }
+  to {
+    top: -50px;
+    transform: translateX(-25%) rotate(360deg);
+  }
+}
+
+@keyframes WaterAnime2 {
+  from {
+    top: 500px;
+    transform: translateX(-50%) rotate(0deg);
+  }
+  to {
+    top: -50px;
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+@keyframes WaterAnime3 {
+  from {
+    top: 500px;
+    transform: translateX(-25%) rotate(0deg);
+  }
+  to {
+    top: -50px;
+    transform: translateX(-25%) rotate(360deg);
+  }
+}
+
+@keyframes WaterAnime4 {
+  from {
+    top: 500px;
+    transform: translateX(25%) rotate(0deg);
+  }
+  to {
+    top: -50px;
+    transform: translateX(25%) rotate(360deg);
+  }
+} */
