@@ -236,8 +236,20 @@ function pomodorotimer() {
 
   if (countdown === 0) {
     clearInterval(timer);
+    startBtn.addEventListener("click", startTimer);
+    pauseBtn.removeEventListener("click", pauseTimer);
+    countdown = 15;
     var AlarmSounds1 = new Audio("AlarmSound1.mp3");
     AlarmSounds1.play();
     timerDisplay.innerText = "END";
+    setTimeout(() => {
+      countdown = 15;
+      min = parseInt(countdown / 60);
+      sec = countdown % 60;
+      let display = `${min < 10 ? "0" + min : min}:${
+        sec < 10 ? "0" + sec : sec
+      }`;
+      timerDisplay.innerText = display;
+    }, 3000);
   }
 }
