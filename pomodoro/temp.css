@@ -1,7 +1,7 @@
 body {
   color: whitesmoke;
   background-color: #444;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Rubik, Arial, Helvetica, sans-serif;
   box-sizing: border-box;
 }
 
@@ -58,8 +58,8 @@ body {
   position: relative;
   top: 80px;
   width: 300px;
-  height: 60px;
-  margin: 0 auto;
+  height: 110px;
+  margin: 2px auto;
   background-color: #444;
 }
 
@@ -68,15 +68,17 @@ body {
   background-color: #7b7b7b;
   width: 80px;
   height: 50px;
-  margin: 5px auto;
+  margin: 3px auto;
   border: 0;
   border-radius: 5px;
-  font-size: 18px;
   text-align: center;
+  font-family: Rubik, Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  white-space: nowrap;
 }
-.button.Func {
-  font-family: Dongle;
-  font-size: 20px;
+.bi {
+  font-size: 24px;
 }
 #btnBox button:hover {
   background-color: #3fabc3;
@@ -90,30 +92,6 @@ body {
   margin: 0px auto;
 }
 
-/* #S-TimeBtnBox {
-  text-align: center;
-  position: relative;
-  top: 170px;
-  width: 300px;
-  height: 60px;
-  margin: 0 auto;
-}
-#S-TimeBtnBox .ST-button {
-  color: #eeeeee;
-  background-color: #7b7b7b;
-  width: 40px;
-  height: 40px;
-  margin: 5px auto;
-  border: 0;
-  border-radius: 5px;
-  font-size: 18px;
-  font-weight: 500;
-  text-align: center;
-}
-#S-TimeBtnBox .ST-button:hover {
-  background-color: #333;
-  cursor: pointer;
-} */
 .AnimeBox {
   position: relative;
   margin: 0px auto;
@@ -143,47 +121,6 @@ body {
   z-index: 0;
 }
 
-/* .WaterAnime {
-  content: "";
-  position: absolute;
-  width: 450px;
-  height: 450px;
-  background-color: #3fabc3;
-  left: 50%;
-  transform: translateX(-25%);
-  border-radius: 35%;
-  animation: filled 30s linear infinite;
-}
-.WaterAnime2 {
-  content: "";
-  position: absolute;
-  width: 450px;
-  height: 450px;
-  background-color: #3fabc3;
-  border-radius: 35%;
-  animation: WaterAnime2 linear 30s infinite;
-}
-
-.WaterAnime3 {
-  content: "";
-  position: absolute;
-  width: 450px;
-  height: 450px;
-  background-color: #3fabc3;
-  border-radius: 35%;
-  animation: WaterAnime3 linear 30s infinite;
-}
-
-.WaterAnime4 {
-  content: "";
-  position: absolute;
-  width: 450px;
-  height: 450px;
-  background-color: #3fabc3;
-  border-radius: 35%;
-  animation: WaterAnime4 30s linear infinite;
-} */
-
 @keyframes swing {
   0% {
     transform: translateX(-50%) rotate(1.2deg);
@@ -195,46 +132,3 @@ body {
     transform: translateX(-50%) rotate(1.2deg);
   }
 }
-
-/* @keyframes filled {
-  from {
-    top: 500px;
-    transform: translateX(-25%) rotate(0deg);
-  }
-  to {
-    top: -50px;
-    transform: translateX(-25%) rotate(360deg);
-  }
-}
-
-@keyframes WaterAnime2 {
-  from {
-    top: 500px;
-    transform: translateX(-50%) rotate(0deg);
-  }
-  to {
-    top: -50px;
-    transform: translateX(-50%) rotate(360deg);
-  }
-}
-@keyframes WaterAnime3 {
-  from {
-    top: 500px;
-    transform: translateX(-25%) rotate(0deg);
-  }
-  to {
-    top: -50px;
-    transform: translateX(-25%) rotate(360deg);
-  }
-}
-
-@keyframes WaterAnime4 {
-  from {
-    top: 500px;
-    transform: translateX(25%) rotate(0deg);
-  }
-  to {
-    top: -50px;
-    transform: translateX(25%) rotate(360deg);
-  }
-} */
