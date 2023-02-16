@@ -63,7 +63,7 @@ body {
   background-color: #444;
 }
 
-.button {
+button {
   color: #eeeeee;
   background-color: #7b7b7b;
   width: 80px;
@@ -80,7 +80,7 @@ body {
 .bi {
   font-size: 24px;
 }
-#btnBox button:hover {
+.button.first:hover {
   background-color: #3fabc3;
   cursor: pointer;
 }
