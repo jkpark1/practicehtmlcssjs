@@ -17,8 +17,8 @@ let sec = "";
 min = parseInt(countdown / 60);
 sec = countdown % 60;
 let display;
-initialColors();
 Rule();
+ResetColor();
 // min = parseInt(countdown / 60);
 // sec = countdown % 60;
 // let display = `${min < 10 ? "0" + min : min}:${sec < 10 ? "0" + sec : sec}`;
@@ -39,11 +39,12 @@ startBtn.addEventListener("click", startTimer);
 ///Buttons : Quick Set Time
 FcsFTBtn.addEventListener("click", setTimer50m);
 FcsHTBtn.addEventListener("click", setTimer25m);
+BrkTBtn.addEventListener("click", BreakTime);
 
 function startTimer() {
   timer = setInterval(pomodorotimer, 1000);
   AnimeWork = setInterval(AnimeRule, 50);
-  BtnColors();
+  StartColor();
   startBtn.removeEventListener("click", startTimer);
   pauseBtn.addEventListener("click", pauseTimer);
   resetBtn.addEventListener("click", resetTimer);
@@ -52,15 +53,15 @@ function startTimer() {
 function pauseTimer() {
   clearInterval(timer);
   clearInterval(AnimeWork);
-  pausesound();
+  PauseColor();
   startBtn.addEventListener("click", startTimer);
 }
 function resetTimer() {
   pauseTimer();
   AnimeReset();
   pausesound();
-  resetBtn.removeEventListener("click", resetTimer);
-
+  pauseBtn.removeEventListener("click", pauseTimer);
+  ResetColor();
   AnimeTop = 105;
   countdown = ResetCnDw;
   Rule();
@@ -71,6 +72,7 @@ function setTimer50m() {
   countdown = 3000;
   ResetCnDw = 3000;
   Rule();
+  SelectFTColor();
 }
 
 function setTimer25m() {
@@ -94,6 +96,7 @@ function BreakTime() {
   sec = countdown % 60;
 
   Rule();
+  SelectBrktColor();
 }
 ///Cal Anime Value : initial top(value) = 105px, target top = -155px, total = 260px box move initial pos
 
@@ -147,14 +150,33 @@ function Rule() {
   display = `${min < 10 ? "0" + min : min}:${sec < 10 ? "0" + sec : sec}`;
   timerDisplay.innerText = display;
 }
-function BtnColors() {
-  startBtn.style.backgroundColor = "#3fabc3";
+function ResetColor() {
+  startBtn.setAttribute("class", "Thover");
+  resetBtn.setAttribute("class", "OffBtn");
+  pauseBtn.setAttribute("class", "OffBtn");
+  FcsFTBtn.setAttribute("class", "Thover");
+  FcsHTBtn.setAttribute("class", "TSelected");
+  BrkTBtn.setAttribute("class", "Thover");
 }
-function initialColors() {
-  pauseBtn.style.backgroundColor = "#5b5b5b";
-  resetBtn.style.backgroundColor = "#5b5b5b";
-  BrkTBtn.style.backgroundColor = "#5b5b5b";
+function StartColor() {
+  startBtn.setAttribute("class", "TSelected");
+  resetBtn.setAttribute("class", "Thover");
+  pauseBtn.setAttribute("class", "Thover");
 }
+function PauseColor() {
+  startBtn.setAttribute("class", "Thover");
+  pauseBtn.setAttribute("class", "TSelected");
+}
+function SelectFTColor() {
+  FcsFTBtn.setAttribute("class", "TSelected");
+  FcsHTBtn.setAttribute("class", "Thover");
+}
+function SelectBrktColor() {
+  BrkTBtn.setAttribute("class", "TSelected");
+  FcsFTBtn.setAttribute("class", "Thover");
+  FcsHTBtn.setAttribute("class", "Thover");
+}
+
 // !!!TEST Code!!!
 // Activate below codes and Deactivate same formet codes upper, if you want TEST Timer works
 // function setTimer50m() {
