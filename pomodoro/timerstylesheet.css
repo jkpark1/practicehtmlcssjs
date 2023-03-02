@@ -1,0 +1,166 @@
+body {
+  color: whitesmoke;
+  background-color: #444;
+  font-family: Rubik, Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+#Main-navbar {
+  background-color: #222;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 3;
+}
+
+.Main-title {
+  float: left;
+  background-color: #222;
+  width: 160px;
+  height: 60px;
+  text-decoration: none;
+  text-align: center;
+}
+.Main-title-text {
+  text-align: center;
+  color: whitesmoke;
+  font-size: 20px;
+  font-weight: 800;
+  display: block;
+  padding: 16px;
+}
+#clockspace {
+  position: relative;
+  top: 60px;
+  width: 100%;
+  height: 600px;
+}
+#clockbox {
+  position: relative;
+  top: 61.5px;
+  margin: 0 auto;
+  width: 250px;
+  height: 150px;
+  text-align: center;
+}
+#pomodoroclock {
+  position: relative;
+  font-size: 80px;
+  display: block;
+  padding: 17.5px;
+  text-align: center;
+  z-index: 2;
+}
+#btnBox {
+  text-align: center;
+  position: relative;
+  top: 80px;
+  width: 300px;
+  height: 110px;
+  margin: 2px auto;
+  background-color: #444;
+}
+
+button {
+  color: #eeeeee;
+  background-color: #7b7b7b;
+  width: 80px;
+  height: 50px;
+  margin: 3px auto;
+  border: 0;
+  border-radius: 5px;
+  text-align: center;
+  font-family: Rubik, Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.Thover:hover {
+  background-color: #3fabc3;
+  cursor: pointer;
+}
+.TSelected {
+  background-color: #3fabc3;
+}
+.OffBtn {
+  background-color: #5b5b5b;
+}
+.bi {
+  font-size: 24px;
+}
+
+#TimerAnime {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  top: 61px;
+  margin: 0px auto;
+}
+
+.AnimeBox {
+  position: relative;
+  margin: 0px auto;
+  top: 25px;
+  width: 250px;
+  height: 250px;
+  border: 7px solid white;
+  border-radius: 50%;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+
+#WaterAnime {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  left: 125px;
+  top: 250px;
+  background-color: #3fabc3;
+  border-radius: 10px;
+  animation: swing 7s ease-in-out infinite;
+  z-index: 0;
+}
+
+.WaterDrop {
+  position: relative;
+  top: -150px;
+  background-color: #3fabc3;
+  width: 12px;
+  height: 12px;
+  margin: 0px auto;
+  border-radius: 5% 100% 100% 100%;
+  transform: rotate(45deg);
+  z-index: 0;
+  animation: sizeup 5s linear infinite;
+}
+
+@keyframes sizeup {
+  0% {
+    width: 1px;
+    height: 1px;
+  }
+  80% {
+    width: 12px;
+    height: 12px;
+  }
+  90% {
+    top: -150px;
+  }
+  100% {
+    top: 120px;
+  }
+}
+
+@keyframes swing {
+  0% {
+    transform: translateX(-50%) rotate(1.5deg);
+  }
+  50% {
+    transform: translateX(-50%) rotate(-1.5deg);
+  }
+  100% {
+    transform: translateX(-50%) rotate(1.5deg);
+  }
+}
