@@ -2,11 +2,12 @@ const button = document.querySelectorAll("button");
 const startBtn = button[0];
 const pauseBtn = button[1];
 const resetBtn = button[2];
-const FcsFTBtn = button[3];
-const FcsHTBtn = button[4];
+const FTBtn = button[3];
+const HTBtn = button[4];
 const BrkTBtn = button[5];
 const icon = document.querySelectorAll(".bi");
 const timerDisplay = document.getElementById("pomodoroclock");
+const Water = document.getElementById("WaterAnime");
 ///Timer Rules
 ///initial Value
 // let countdown = 1500;
@@ -17,18 +18,18 @@ let min = "";
 let sec = "";
 min = parseInt(countdown / 60);
 sec = countdown % 60;
+let ActBtn;
 let display;
 Rule();
 ResetColor();
 // min = parseInt(countdown / 60);
 // sec = countdown % 60;
 // let display = `${min < 10 ? "0" + min : min}:${sec < 10 ? "0" + sec : sec}`;
-var Alarm = new Audio("AlarmSound1.mp3");
+let Alarm = new Audio("AlarmSound1.mp3");
 ///setInterval Functions
 let timer; ///This is Start Timer Function
 let AnimeWork;
-var Water = document.getElementById("WaterAnime");
-var AnimeTop = 250;
+let AnimeTop = 250;
 
 ///Buttons : Control Timer
 ///startBtn : Click 'Start'button on page Timer start
@@ -38,8 +39,8 @@ var AnimeTop = 250;
 ///Timer : initial vlaue
 startBtn.addEventListener("click", startTimer);
 ///Buttons : Quick Set Time
-FcsFTBtn.addEventListener("click", setTimer50m);
-FcsHTBtn.addEventListener("click", setTimer25m);
+FTBtn.addEventListener("click", setTimer50m);
+HTBtn.addEventListener("click", setTimer25m);
 BrkTBtn.addEventListener("click", BreakTime);
 
 function startTimer() {
@@ -50,6 +51,12 @@ function startTimer() {
   startBtn.removeEventListener("click", startTimer);
   pauseBtn.addEventListener("click", pauseTimer);
   resetBtn.addEventListener("click", resetTimer);
+  if (ResetCnDw === 10) {
+    HTBtn.removeEventListener("click", setTimer25m);
+  } else if (ResetCnDw === 16) {
+    HTBtn.addEventListener("click", setTimer25m);
+    FTBtn.removeEventListener("click", setTimer50m);
+  }
 }
 
 function pauseTimer() {
@@ -68,6 +75,7 @@ function resetTimer() {
   ResetColor();
   AnimeTop = 250;
   countdown = ResetCnDw;
+
   Rule();
 }
 // function setTimer50m() {
@@ -150,7 +158,21 @@ function pomodorotimer() {
   } else if (countdown < 0) {
     timerDisplay.innerText = "Set Time";
   }
+  if (ResetCnDw != 10) {
+    HTBtn.addEventListener("click", setTimer25m);
+  } else if (ResetCnDw != 16) {
+    FTBtn.addEventListener("click", setTimer50m);
+  }
 }
+function HTButton() {
+  ActBtn = 1;
+  HTBtn.addEventListener("click", setTimer25m);
+}
+function FTButton() {
+  ActBtn = 2;
+  FTBtn.addEventListener("click", setTimer50m);
+}
+
 function Rule() {
   min = parseInt(countdown / 60);
   sec = countdown % 60;
@@ -161,8 +183,8 @@ function ResetColor() {
   startBtn.setAttribute("class", "Thover");
   resetBtn.setAttribute("class", "OffBtn");
   pauseBtn.setAttribute("class", "OffBtn");
-  FcsFTBtn.setAttribute("class", "Thover");
-  FcsHTBtn.setAttribute("class", "TSelected");
+  FTBtn.setAttribute("class", "Thover");
+  HTBtn.setAttribute("class", "TSelected");
   BrkTBtn.setAttribute("class", "Thover");
 }
 function StartColor() {
@@ -175,13 +197,13 @@ function PauseColor() {
   pauseBtn.setAttribute("class", "TSelected");
 }
 function SelectFTColor() {
-  FcsFTBtn.setAttribute("class", "TSelected");
-  FcsHTBtn.setAttribute("class", "Thover");
+  FTBtn.setAttribute("class", "TSelected");
+  HTBtn.setAttribute("class", "Thover");
 }
 function SelectBrktColor() {
   BrkTBtn.setAttribute("class", "TSelected");
-  FcsFTBtn.setAttribute("class", "Thover");
-  FcsHTBtn.setAttribute("class", "Thover");
+  FTBtn.setAttribute("class", "Thover");
+  HTBtn.setAttribute("class", "Thover");
 }
 function WaterDrop() {
   document.getElementById("DropWater").setAttribute("class", "WaterDrop");

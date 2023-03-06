@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      #main {
+        display: flex;
+        flex: inherit;
+        border: 1px solid black;
+        width: 600px;
+        height: 1000px;
+      }
+      .box:nth-child(1) {
+        flex-basis: 50%;
+        flex-shrink: 1;
+        flex-grow: 1;
+        border: 1px solid blue;
+        width: 200px;
+        height: 200px;
+      }
+      .box:nth-child(2) {
+        flex-shrink: 1;
+        flex-grow: 1;
+        border: 1px solid blue;
+        width: 200px;
+        height: 200px;
+      }
+      .box:nth-child(3) {
+        flex-shrink: 1;
+        flex-grow: 1;
+        border: 1px solid blue;
+        width: 200px;
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <div class="box">box1</div>
+      <div class="box">box2</div>
+      <div class="box">box3</div>
+    </div>
+  </body>
+</html>
