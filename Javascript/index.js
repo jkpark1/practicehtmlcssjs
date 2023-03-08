@@ -1,28 +1,27 @@
-let userName = prompt("이름을 입력해 주세요", "홍길동");
-let userHeight = Number(prompt("신장을 입력해 주세요", "185"));
-let userWeight = Number(prompt("체중을 입력해 주세요", "88"));
-let nomalWeight = (userHeight - 100) * 0.9;
-let result = userWeight >= nomalWeight - 5 && userWeight <= nomalWeight + 5;
-result = result ? "적정 체중입니다." : "적정 체중이 아닙니다.";
-document.write(`${userName}님은 ${result}<br>`);
-document.write(
-  `${userName}님의 적정 체중은 ${nomalWeight.toFixed(1) - 5}~${
-    nomalWeight.toFixed(1) + 5
-  }입니다.<br>`
+let site = prompt(
+  "구글, 네이버, 다음, 빙 중 자주 이용하는 포털 사이트 이름을 적어주세요."
 );
-if ((result = "적정 체중이 아닙니다.")) {
-  nomal();
+let url;
+
+switch (site) {
+  case "구글":
+  case "google":
+    url = "www.google.com";
+    break;
+  case "네이버":
+  case "naver":
+    url = "www.naver.com";
+    break;
+  case "다음":
+  case "daum":
+    url = "www.daum.net";
+    break;
+  case "빙":
+  case "bing":
+    url = "bing.com";
+    break;
+  default:
+    alert("아쉽지만 보기에 없습니다.");
 }
-function nomal() {
-  let less = nomalWeight - 5 - userWeight;
-  let more = userWeight - (nomalWeight + 5);
-  if (userWeight < nomalWeight - 5) {
-    document.write(
-      `${userName}님은 정상 체중 보다 ${less.toFixed(1)}kg 미달입니다.`
-    );
-  } else if (userWeight > nomalWeight + 5) {
-    document.write(
-      `${userName}님은 정상 체중 보다 ${more.toFixed(1)}kg 초과입니다.`
-    );
-  }
-}
+
+if (url) location.href = "https://" + url;
