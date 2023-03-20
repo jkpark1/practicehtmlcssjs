@@ -54,7 +54,6 @@ function startTimer() {
   if (ResetCnDw === 10) {
     HTBtn.removeEventListener("click", setTimer25m);
   } else if (ResetCnDw === 16) {
-    HTBtn.addEventListener("click", setTimer25m);
     FTBtn.removeEventListener("click", setTimer50m);
   }
 }
@@ -75,7 +74,12 @@ function resetTimer() {
   ResetColor();
   AnimeTop = 250;
   countdown = ResetCnDw;
-
+  if (ResetCnDw === 10) {
+    HTBtn.addEventListener("click", setTimer25m);
+  } else if (ResetCnDw === 16) {
+    SelectFTColor();
+    FTBtn.addEventListener("click", setTimer50m);
+  }
   Rule();
 }
 // function setTimer50m() {
@@ -155,6 +159,7 @@ function pomodorotimer() {
     countdown = ResetCnDw;
     playsonud();
     timerDisplay.innerText = "Nice!";
+    setTimeout(resetTimer, 10 * 1000);
   } else if (countdown < 0) {
     timerDisplay.innerText = "Set Time";
   }
@@ -246,6 +251,7 @@ function setTimer25m() {
   clearInterval(timer);
   resetTimer();
   WaterDropStop();
+  ResetColor();
   countdown = 10;
   ResetCnDw = 10;
   Rule();
