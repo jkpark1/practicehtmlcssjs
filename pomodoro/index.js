@@ -12,6 +12,7 @@ const timerDisplay = document.getElementById("pomodoroclock");
 const icon = document.querySelectorAll(".bi");
 const Water = document.getElementById("WaterAnime");
 const dropdownmsg = document.getElementById("dropdown-content");
+const titlecolok = document.getElementsByTagName("title")[0];
 now_date_time();
 
 function getTime() {
@@ -79,6 +80,7 @@ function startTimer() {
   AnimeWork = setInterval(AnimeRule, 50);
   StartColor();
   WaterDrop();
+  titlecolok.innerText = display;
   startBtn.removeEventListener("click", startTimer);
   pauseBtn.addEventListener("click", pauseTimer);
   resetBtn.addEventListener("click", resetTimer);
@@ -103,6 +105,7 @@ function resetTimer() {
   WaterDropStop();
   pauseBtn.removeEventListener("click", pauseTimer);
   ResetColor();
+  titlecolok.innerHTML = "FocusHelper - pomodoro";
   AnimeTop = 250;
   countdown = ResetCnDw;
   if (ResetCnDw === 10) {
@@ -183,6 +186,7 @@ function pausesound() {
 function pomodorotimer() {
   countdown--;
   Rule();
+  titlecolok.innerText = display;
   if (countdown === 0) {
     clearInterval(timer);
     startBtn.addEventListener("click", startTimer);
