@@ -3,25 +3,35 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SimpleTimer</title>
+    <title>FocusHelper-pomodoro</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet" />
     <link rel="stylesheet" href="index.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
   </head>
-  <body>
-    <div id="Main-navbar">
-      <a class="Main-title" href="./index.html"
-        ><span class="Main-title-text">SimpleTime</span></a
+  <body class="Group2">
+    <div id="Main-navbar" class="modalblur Group1">
+      <a id="Main-title" class="Group1" href="./index.html"
+        ><span class="Main-title-text">FocusHelper</span></a
       >
+      <button id="day-night-Toggle" class="Group1">
+        <i id="modeIcon" class="bi bi-brightness-high-fill"></i>
+      </button>
+      <button id="help-msg" class="Group1">
+        <i class="bi bi-info-circle-fill"></i>
+      </button>
     </div>
-
-    <div id="clockspace">
+    <div id="clockspace" class="modalblur Group2">
       <div id="TimerAnime">
         <div class="AnimeBox">
           <div id="clockbox"><span id="pomodoroclock"></span></div>
@@ -32,7 +42,7 @@
           <div id="WaterAnimefth" class="Dropwater"></div>
         </div>
       </div>
-      <div id="btnBox">
+      <div id="btnBox" class="Group2">
         <button class="button"><i class="bi bi-play-fill"></i></button>
         <button class="button"><i class="bi bi-pause-fill"></i></button>
         <button class="button"><i class="bi bi-arrow-clockwise"></i></button>
@@ -40,8 +50,52 @@
         <button class="button">Half</button>
         <button class="button">Break</button>
       </div>
+      <div id="TDIBtnBox">
+        <span id="opendate">Today is</span>
+        <div id="nowdate"></div>
+      </div>
     </div>
-
+    <div id="modal-layer">
+      <div id="Help-modal" class="Group2">
+        <div id="top-modal">
+          <span id="helptxt">HELP</span>
+        </div>
+        <div id="middle-modal">
+          <br />
+          <div class="detailtxt">
+            Full :
+            <span class="light-txt"
+              >Set 50min Timer and Set 10min Break time</span
+            ><br />
+            Half :
+            <span class="light-txt"
+              >Set 25min Timer and Set 5min Break time</span
+            ><br />
+            Break :
+            <span class="light-txt"
+              >Set break time according to the Full and Half time</span
+            >
+          </div>
+          <br />
+          <div class="detailtxt">
+            <i class="bi bi-play-fill"></i> : Play timer<br />
+            <i class="bi bi-pause-fill"></i> : Pause Timer<br />
+            <i class="bi bi-arrow-clockwise"></i> : Reset Timer<br />
+            <br />
+          </div>
+          <div class="">
+            If time out, Play Alram Sound 10s and reset timer automatically<br />
+            <br />Please send any feedback or suggestion to the email below.<br />
+            I support your dreams and goals😎"<br />
+            <br />
+            stw369@gmail.com
+          </div>
+        </div>
+        <div id="bottom-modal">
+          <button id="modal-close"><i class="bi bi-x-circle-fill"></i></button>
+        </div>
+      </div>
+    </div>
     <script
       src="https://code.jquery.com/jquery-3.6.3.js"
       integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
